@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee6ca6d0-3048-4567-a626-4b8c70db3cd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/01_rnn_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01_text_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_rnn_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Softmax与分类模型.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/多层感知机.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/线性回归.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/过拟合欠拟合及其解决方案.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_rnn_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/01_rnn_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +39,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_rnn_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="280">
+              <caret line="35" lean-forward="true" selection-start-line="7" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01_rnn_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-551">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="127">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -74,6 +86,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>load_data_jay_lyrics</find>
       <find>d2l</find>
     </findStrings>
   </component>
@@ -89,11 +102,12 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/01_perception_1.py" />
         <option value="$PROJECT_DIR$/02_overfit_01.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/02_overfit_02.py" />
         <option value="$PROJECT_DIR$/02_dropout_1.py" />
         <option value="$PROJECT_DIR$/01_text_1.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/01_rnn_1.py" />
+        <option value="$PROJECT_DIR$/01_rnn_2.py" />
       </list>
     </option>
   </component>
@@ -143,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.01_text_1">
+  <component name="RunManager" selected="Python.01_rnn_1">
     <configuration name="01_linear_regression_2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="deep_learning_pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,7 +179,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="01_perception_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="01_rnn_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_learning_pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,7 +191,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_perception_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_rnn_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,19 +286,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.01_linear_regression_2" />
-      <item itemvalue="Python.01_perception_1" />
       <item itemvalue="Python.02_overfit_01" />
       <item itemvalue="Python.02_overfit_02" />
       <item itemvalue="Python.02_dropout_1" />
       <item itemvalue="Python.01_text_1" />
+      <item itemvalue="Python.01_rnn_1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.01_rnn_1" />
         <item itemvalue="Python.01_text_1" />
         <item itemvalue="Python.02_dropout_1" />
         <item itemvalue="Python.02_overfit_02" />
         <item itemvalue="Python.02_overfit_01" />
-        <item itemvalue="Python.01_perception_1" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +325,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27797204" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3811189" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18006992" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -387,43 +401,33 @@
           <line>9</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/01_rnn_1.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/01_rnn_1.py</url>
+          <line>181</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>y_hat.shape</expression-string>
+        <expression-string>param.grad.data.shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>H2.shape</expression-string>
+        <expression-string>y.long()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>H1.shape</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>W1.shape</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>X.shape</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>d2l.semilogy(range(1, num_epochs + 1), train_ls, 'epochs', 'loss',                  range(1, num_epochs + 1), test_ls, ['train', 'test'])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>param.grad.shape</expression-string>
+        <expression-string>Y.shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -433,12 +437,32 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y.shpae</expression-string>
+        <expression-string>Y.t().shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test_labels.shape</expression-string>
+        <expression-string>Y.t()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Y.T</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>outputs.shape</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>state[0].shape</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(state)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -565,16 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-551">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02_dropout_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -595,10 +609,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/torch/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="699" column="8" selection-start-line="699" selection-start-column="8" selection-end-line="699" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01_rnn_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="280">
+          <caret line="35" lean-forward="true" selection-start-line="7" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_rnn_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
