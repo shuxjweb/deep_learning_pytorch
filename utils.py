@@ -414,7 +414,7 @@ def grad_clipping(params, theta, device):
     for param in params:
         norm += (param.grad.data ** 2).sum()
     norm = norm.sqrt().item()
-    if norm > theta:
+    if norm > theta:      # 0.01
         for param in params:
             param.grad.data *= (theta / norm)
 
@@ -430,12 +430,12 @@ def train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
     params = get_params()
     loss = nn.CrossEntropyLoss()
 
-    for epoch in range(num_epochs):
+    for epoch in range(num_epochs):       # 160
         if not is_random_iter:  # 如使用相邻采样，在epoch开始时初始化隐藏状态
             state = init_rnn_state(batch_size, num_hiddens, device)
         l_sum, n, start = 0.0, 0, time.time()
         data_iter = data_iter_fn(corpus_indices, batch_size, num_steps, device)
-        for X, Y in data_iter:
+        for X, Y in data_iter:   # [32, 35], [32, 35]
             if is_random_iter:  # 如使用随机采样，在每个小批量更新前初始化隐藏状态
                 state = init_rnn_state(batch_size, num_hiddens, device)
             else: 
@@ -444,16 +444,16 @@ def train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
                 for s in state:
                     s.detach_()
             
-            inputs = to_onehot(X, vocab_size)
+            inputs = to_onehot(X, vocab_size)        # [35, 32, 1027]
             # outputs有num_steps个形状为(batch_size, vocab_size)的矩阵
-            (outputs, state) = rnn(inputs, state, params)
+            (outputs, state) = rnn(inputs, state, params)   # [35, 32, 1027], [32, 256]
             # 拼接之后形状为(num_steps * batch_size, vocab_size)
-            outputs = torch.cat(outputs, dim=0)
+            outputs = torch.cat(outputs, dim=0)      # [1120, 1027]
             # Y的形状是(batch_size, num_steps)，转置后再变成长度为
             # batch * num_steps 的向量，这样跟输出的行一一对应
-            y = torch.transpose(Y, 0, 1).contiguous().view(-1)
+            y = torch.transpose(Y, 0, 1).contiguous().view(-1)       # [1120,]
             # 使用交叉熵损失计算平均分类误差
-            l = loss(outputs, y.long())
+            l = loss(outputs, y.long())       # 6.9345
             
             # 梯度清0
             if params[0].grad is not None:
@@ -485,13 +485,13 @@ class RNNModel(nn.Module):
         self.dense = nn.Linear(self.hidden_size, vocab_size)
         self.state = None
 
-    def forward(self, inputs, state): # inputs: (batch, seq_len)
+    def forward(self, inputs, state):    # [32, 35], [1, 32, 256] inputs: (batch, seq_len)
         # 获取one-hot向量表示
-        X = to_onehot(inputs, self.vocab_size) # X是个list
-        Y, self.state = self.rnn(torch.stack(X), state)
+        X = to_onehot(inputs, self.vocab_size)   # [35, 32, 1027] X是个list
+        Y, self.state = self.rnn(torch.stack(X), state)    # [35, 32, 256], [1, 32, 256]
         # 全连接层会首先将Y的形状变成(num_steps * batch_size, num_hiddens)，它的输出
         # 形状为(num_steps * batch_size, vocab_size)
-        output = self.dense(Y.view(-1, Y.shape[-1]))
+        output = self.dense(Y.view(-1, Y.shape[-1]))       # [1120, 1027]
         return output, self.state
 
 def predict_rnn_pytorch(prefix, num_chars, model, vocab_size, device, idx_to_char,
@@ -524,7 +524,7 @@ def train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
     for epoch in range(num_epochs):
         l_sum, n, start = 0.0, 0, time.time()
         data_iter = data_iter_consecutive(corpus_indices, batch_size, num_steps, device) # 相邻采样
-        for X, Y in data_iter:
+        for X, Y in data_iter:     # [32, 35], [32, 35]
             if state is not None:
                 # 使用detach函数从计算图分离隐藏状态, 这是为了
                 # 使模型参数的梯度计算只依赖一次迭代读取的小批量序列(防止梯度计算开销太大)
@@ -533,7 +533,7 @@ def train_and_predict_rnn_pytorch(model, num_hiddens, vocab_size, device,
                 else:   
                     state = state.detach()
     
-            (output, state) = model(X, state) # output: 形状为(num_steps * batch_size, vocab_size)
+            (output, state) = model(X, state)    # [1120, 1027], [1, 32, 256]  output: 形状为(num_steps * batch_size, vocab_size)
             
             # Y的形状是(batch_size, num_steps)，转置后再变成长度为
             # batch * num_steps 的向量，这样跟输出的行一一对应
