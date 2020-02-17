@@ -1,17 +1,13 @@
+import torch
+import torch.nn as nn
 import numpy as np
 
 
-def softmax(X):       # [256, 10]
-    X_item = [float(np.exp(item)) for item in X]
-    X_sum = float(np.sum(X_item))
-    X_item = [item/X_sum for item in X_item]
-    return X_item
+X = torch.rand(4, 3, 100, 100)
+print(X.shape)
 
-print(softmax([100, 101, 102]), '\n')
-
-print('a', softmax([10.0, 10.1, 10.2]))
-print('b', softmax([-100, -101, -102]))
-print('c', softmax([-2, -1, 0]))
-print('d', softmax([1000, 1010, 1020]))
-
-
+conv2d = nn.Conv2d(in_channels=3, out_channels=4, kernel_size=3, padding=2)
+Y = conv2d(X)
+print('Y.shape: ', Y.shape)
+print('weight.shape: ', conv2d.weight.shape)
+print('bias.shape: ', conv2d.bias.shape)
