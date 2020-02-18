@@ -15,7 +15,8 @@ d2l = sys.modules[__name__]
 # Defined in file: ./chapter_preface/preface.md
 from matplotlib import pyplot as plt
 
-import d2l
+# import d2l
+import input.d2l as d2l
 import json
 import time
 from collections import namedtuple
