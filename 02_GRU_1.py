@@ -13,6 +13,9 @@ num_inputs, num_hiddens, num_outputs = vocab_size, 256, vocab_size
 print('will use', device)
 
 
+# • 重置⻔有助于捕捉时间序列⾥短期的依赖关系；
+# • 更新⻔有助于捕捉时间序列⾥⻓期的依赖关系。
+
 def get_params():
     def _one(shape):
         ts = torch.tensor(np.random.normal(0, 0.01, size=shape), device=device, dtype=torch.float32)  # 正态分布

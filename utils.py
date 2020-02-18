@@ -437,7 +437,7 @@ def train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
         data_iter = data_iter_fn(corpus_indices, batch_size, num_steps, device)
         for X, Y in data_iter:   # [32, 35], [32, 35]
             if is_random_iter:  # 如使用随机采样，在每个小批量更新前初始化隐藏状态
-                state = init_rnn_state(batch_size, num_hiddens, device)
+                state = init_rnn_state(batch_size, num_hiddens, device)    # [2, 32, 256]
             else: 
             # 否则需要使用detach函数从计算图分离隐藏状态, 这是为了
             # 使模型参数的梯度计算只依赖一次迭代读取的小批量序列(防止梯度计算开销太大)
